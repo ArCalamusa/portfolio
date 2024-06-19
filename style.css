@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #168b30;
+}
+
+main {
+    width: min(95%, 600px);
+    background-color: #141414;
+    border-radius: 15px;
+    /*16px=1rem*/
+    display: flex;
+    font: 400 19px "Inter", sans-serif;
+    /*19px=1.1rem*/
+    color: #fff;
+}
+
+.name {
+    margin-top: 30px;
+    /*30px=1.875rem*/
+}
+
+.name p:nth-child(1) {
+    font: 400 28px "Inter", sans-serif;
+    /*28px=1.75rem*/
+}
+
+.name p:nth-child(2) {
+    font: 400 18px "Inter", sans-serif;
+    /*18px=1.125rem*/
+    color: #168b30
+}
+
+section {
+    width: 40%;
+    height: auto;
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px 0 0 16px;
+    /*16px=1rem*/
+}
+
+img {
+    width: 150px;
+    /*150px=9.375rem*/
+    height: 150px;
+    /*150px=9.375rem*/
+    border-radius: 50%;
+    border: 2px solid #168b30;
+    /*2px=0.125rem*/
+    object-fit: cover;
+    object-position: 0 1%;
+}
+
+article {
+    width: 60%;
+    padding: 20px;
+    /*20px=1.25rem*/
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    /*35px=2.1rem*/
+}
+
+.description {
+    font: 400 16px "Inter", sans-serif;
+    /*2px=0.125rem*/
+}
+
+.socials {
+    color: #168b30;
+}
+
+.socials+.socials {
+    margin-left: 20px;
+    /*20px=1.25rem*/
+}
+
+button {
+    background-color: #f5f5f5;
+    width: 80%;
+    height: 45px;
+    /*2px=2.8rem*/
+    border: none;
+    outline: none;
+    font-size: 16px;
+    /*16px=1rem*/
+    border-radius: 8px;
+    /*2px=0.5rem*/
+    color: #111;
+}
+
+@media screen and (max-width: 550px) {
+    main {
+        flex-direction: column;
+    }
+
+    article,
+    .image,
+    button {
+        text-align: center;
+        margin: 0 auto;
+        gap: 25px;
+    }
+
+    article,
+    .socials {
+        padding: 5px
+    }
+
+    .image {
+        margin-top: 5%;
+        background-color: transparent;
+    }
+
+    .name {
+        margin-top: 0px;
+    }
+}
